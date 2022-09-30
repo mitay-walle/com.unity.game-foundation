@@ -1,5 +1,9 @@
 # Game Foundation
 
+## Disclaimer
+
+Official development is stoped, but I wanna continue to develop this framework. Please, contribute, if you want.
+
 ## Introduction
 
 During game development, there are many basic gameplay systems that are common to most games. Developers have to take the time to build and rebuild these systems when they really want to focus on what’s unique and fun.
