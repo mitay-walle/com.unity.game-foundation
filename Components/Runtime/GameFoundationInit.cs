@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine.Events;
 using UnityEngine.GameFoundation.DefaultCatalog;
 using UnityEngine.GameFoundation.DefaultLayers;
@@ -12,7 +13,7 @@ namespace UnityEngine.GameFoundation.Components
     /// <summary>
     ///     Component that initialize Game Foundation SDK.
     /// </summary>
-    [ExecuteAlways]
+    //[ExecuteAlways]
     public class GameFoundationInit : MonoBehaviour
     {
         /// <summary>
@@ -113,10 +114,18 @@ namespace UnityEngine.GameFoundation.Components
         /// </summary>
         static readonly GameFoundationDebug k_GFLogger = GameFoundationDebug.Get<GameFoundationInit>();
 
+        [InitializeOnEnterPlayMode]
+        public static void ReinitOnPlaymode()
+        {
+            s_Initialized = false;
+            Debug.Log($"ReinitOnPlaymode | s_Initialized {s_Initialized}");
+        }
+        
         void Awake()
         {
-            if (!Application.isPlaying)
-                return;
+            Debug.Log($"Awake | s_Initialized {s_Initialized} | isPlaying {Application.isPlaying}");
+            
+            if (!Application.isPlaying) return;
 
             if (!s_Initialized)
             {
