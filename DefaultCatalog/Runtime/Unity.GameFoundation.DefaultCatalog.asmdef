@@ -5,7 +5,9 @@
         "Unity.GameFoundation",
         "UnityEngine.Purchasing",
         "UnityEngine.Purchasing.Stores",
-        "UnityEngine.Purchasing.Codeless"
+        "UnityEngine.Purchasing.Codeless",
+        "UnityEditor.UI",
+        "UnityEngine.UI"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

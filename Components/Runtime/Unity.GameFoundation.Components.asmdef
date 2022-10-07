@@ -7,7 +7,9 @@
         "Unity.GameFoundation.DefaultLayers",
         "UnityEngine.Purchasing",
         "Unity.ResourceManager",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "UnityEditor.UI",
+        "UnityEngine.UI"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

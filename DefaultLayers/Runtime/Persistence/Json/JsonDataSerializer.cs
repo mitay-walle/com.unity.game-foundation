@@ -12,6 +12,8 @@ namespace UnityEngine.GameFoundation.DefaultLayers.Persistence
     /// </summary>
     public sealed class JsonDataSerializer : IDataSerializer
     {
+        public static bool IsPrettyPrint = true;
+        
         static readonly List<MethodInfo> s_Methods;
 
         static JsonDataSerializer()
@@ -31,7 +33,7 @@ namespace UnityEngine.GameFoundation.DefaultLayers.Persistence
         /// <inheritdoc/>
         public void Serialize(GameFoundationData data, TextWriter writer)
         {
-            writer.Write(JsonUtility.ToJson(data));
+            writer.Write(JsonUtility.ToJson(data,IsPrettyPrint));
         }
 
         /// <inheritdoc/>

@@ -9,7 +9,9 @@
         "UnityEngine.Purchasing.SecurityCore",
         "UnityEngine.Purchasing.SecurityStub",
         "UnityEngine.Purchasing.Stores",
-        "Purchasing.Common"
+        "Purchasing.Common",
+        "UnityEditor.UI",
+        "UnityEngine.UI"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

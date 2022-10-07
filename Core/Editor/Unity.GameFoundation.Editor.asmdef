@@ -2,7 +2,9 @@
     "name": "Unity.GameFoundation.Editor",
     "references": [
         "Unity.GameFoundation",
-        "Unity.Promise"
+        "Unity.Promise",
+        "UnityEditor.UI",
+        "UnityEngine.UI"
     ],
     "includePlatforms": [
         "Editor"
