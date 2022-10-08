@@ -9,7 +9,8 @@ Official development is stoped, but I wanna continue to develop this framework. 
 During game development, there are many basic gameplay systems that are common to most games. Developers have to take the time to build and rebuild these systems when they really want to focus on what’s unique and fun.
 
 Game Foundation provides pre-built common game systems that are flexible and fully extensible so that developers can focus on building unique gameplay.
-
+[Official online manual](https://docs.unity3d.com/Packages/com.unity.game.foundation@0.1/manual/index.html) 
+[official Unite Copenghagen video tutorial] (https://youtube.com/watch?v=pHTNqGqEnMc) 
 <hr />
 
 ## Getting Started
