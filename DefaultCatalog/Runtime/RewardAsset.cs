@@ -226,7 +226,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
         }
 
         /// <inheritdoc/>
-        protected override CatalogItemConfig ConfigureItem(CatalogBuilder builder, IExternalValueProvider valueProvider)
+        protected override CatalogItemConfig ConfigureItem(ICatalogBuilder builder, IExternalValueProvider valueProvider)
         {
             GFTools.ThrowIfArgNull(builder, nameof(builder));
 

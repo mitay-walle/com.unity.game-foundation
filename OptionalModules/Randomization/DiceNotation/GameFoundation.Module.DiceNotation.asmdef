@@ -1,0 +1,20 @@
+{
+    "name": "GameFoundation.Module.DiceNotation",
+    "rootNamespace": "UnityEngine.GameFoundation.OptionalModules.DiceNotation",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.chris-wagner.dice-notation",
+            "expression": "0",
+            "define": "DICE_NOTATION"
+        }
+    ],
+    "noEngineReferences": false
+}

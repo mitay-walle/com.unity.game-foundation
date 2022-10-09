@@ -26,7 +26,7 @@ namespace UnityEngine.GameFoundation.DefaultLayers
         }
 
         /// <inheritdoc/>
-        void ICatalogConfigurator.Configure(CatalogBuilder builder)
+        void ICatalogConfigurator.Configure(ICatalogBuilder builder)
             => (m_CatalogAsset as ICatalogConfigurator).Configure(builder);
     }
 }

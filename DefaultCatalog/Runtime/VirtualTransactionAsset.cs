@@ -28,7 +28,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
 
         /// <inheritdoc/>
         protected override VirtualTransactionConfig ConfigureTransaction(
-            CatalogBuilder builder, IExternalValueProvider valueProvider)
+            ICatalogBuilder builder, IExternalValueProvider valueProvider)
         {
             var config = builder.Create<VirtualTransactionConfig>(key);
             config.costs = m_Costs.Configure();

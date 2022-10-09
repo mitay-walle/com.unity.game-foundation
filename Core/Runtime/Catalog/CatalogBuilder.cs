@@ -11,7 +11,7 @@ namespace UnityEngine.GameFoundation
     ///     It is given to the data layer so it can configure the data based on its
     ///     internal data structure, that Game Foundation doesn't need to know.
     /// </summary>
-    public class CatalogBuilder
+    public class CatalogBuilder : ICatalogBuilder
     {
         /// <summary>
         ///     The configurations of the <see cref="Tag"/> instances to build.

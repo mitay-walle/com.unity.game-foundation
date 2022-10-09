@@ -35,7 +35,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
         /// <param name="builder">
         ///     The target builder.
         /// </param>
-        internal void Configure(CatalogBuilder builder)
+        internal void Configure(ICatalogBuilder builder)
         {
             ConfigureItem(builder);
         }
@@ -50,7 +50,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
         /// <returns>
         ///     The item config.
         /// </returns>
-        TagConfig ConfigureItem(CatalogBuilder builder)
+        TagConfig ConfigureItem(ICatalogBuilder builder)
         {
             var config = builder.GetTag(key);
             return config;

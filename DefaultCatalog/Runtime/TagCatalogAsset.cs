@@ -122,7 +122,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
         /// <param name="builder">
         ///     The target builder.
         /// </param>
-        internal void Configure(CatalogBuilder builder)
+        internal void Configure(ICatalogBuilder builder)
         {
             ConfigureCatalog(builder);
         }
@@ -158,7 +158,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
         /// <param name="builder">
         ///     The target builder.
         /// </param>
-        void ConfigureCatalog(CatalogBuilder builder)
+        void ConfigureCatalog(ICatalogBuilder builder)
         {
             foreach (var tagAsset in m_Tags)
             {

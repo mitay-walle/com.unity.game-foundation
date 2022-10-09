@@ -230,7 +230,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
         ///     A value provider to override some catalog item's data
         ///     with an external source when configuring them.
         /// </param>
-        internal void Configure(CatalogBuilder builder, IExternalValueProvider valueProvider)
+        internal void Configure(ICatalogBuilder builder, IExternalValueProvider valueProvider)
         {
             var item = ConfigureItem(builder, valueProvider);
 
@@ -297,7 +297,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
         /// <returns>
         ///     The item config.
         /// </returns>
-        protected abstract CatalogItemConfig ConfigureItem(CatalogBuilder builder, IExternalValueProvider valueProvider);
+        protected abstract CatalogItemConfig ConfigureItem(ICatalogBuilder builder, IExternalValueProvider valueProvider);
 
         /// <summary>
         ///     Deserialize the given lists into the given dictionary.

@@ -8,7 +8,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
     public partial class GameParameterAsset : CatalogItemAsset
     {
         /// <inheritdoc/>
-        protected override CatalogItemConfig ConfigureItem(CatalogBuilder builder, IExternalValueProvider valueProvider)
+        protected override CatalogItemConfig ConfigureItem(ICatalogBuilder builder, IExternalValueProvider valueProvider)
             => builder.Create<GameParameterConfig>(key);
     }
 }

@@ -89,7 +89,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
 
         /// <inheritdoc/>
         protected override IAPTransactionConfig ConfigureTransaction(
-            CatalogBuilder builder, IExternalValueProvider valueProvider)
+            ICatalogBuilder builder, IExternalValueProvider valueProvider)
         {
             var item = builder.Create<IAPTransactionConfig>(key);
 

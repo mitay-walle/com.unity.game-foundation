@@ -292,7 +292,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
         /// <param name="valueProvider">
         ///     A value provider to override some catalog item's data with an external source.
         /// </param>
-        protected void ConfigureCatalog(CatalogBuilder builder, IExternalValueProvider valueProvider)
+        protected void ConfigureCatalog(ICatalogBuilder builder, IExternalValueProvider valueProvider)
         {
             foreach (var itemAsset in m_Items)
             {
@@ -421,7 +421,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
         }
 
         /// <inheritdoc/>
-        void ICatalogConfigurator.Configure(CatalogBuilder builder)
+        void ICatalogConfigurator.Configure(ICatalogBuilder builder)
         {
             m_TagCatalog.Configure(builder);
 
@@ -459,6 +459,11 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
                     m_Items.RemoveAt(i);
                 }
             }
+        }
+
+        public void Configure(ICatalogBuilder builder)
+        {
+            throw new NotImplementedException();
         }
     }
 }

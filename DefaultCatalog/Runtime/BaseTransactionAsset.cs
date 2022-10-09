@@ -48,7 +48,7 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
     {
         /// <inheritdoc/>
         protected sealed override CatalogItemConfig ConfigureItem(
-            CatalogBuilder builder, IExternalValueProvider valueProvider)
+            ICatalogBuilder builder, IExternalValueProvider valueProvider)
         {
             var item = ConfigureTransaction(builder, valueProvider);
             var payoutConfig = m_Payout.Configure();
@@ -70,6 +70,6 @@ namespace UnityEngine.GameFoundation.DefaultCatalog
         /// <returns>
         ///     The config object.
         /// </returns>
-        protected abstract TConfig ConfigureTransaction(CatalogBuilder builder, IExternalValueProvider valueProvider);
+        protected abstract TConfig ConfigureTransaction(ICatalogBuilder builder, IExternalValueProvider valueProvider);
     }
 }

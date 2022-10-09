@@ -11,6 +11,6 @@ namespace UnityEngine.GameFoundation
         /// <param name="builder">
         ///     The target builder.
         /// </param>
-        void Configure(CatalogBuilder builder);
+        void Configure(ICatalogBuilder builder);
     }
 }
