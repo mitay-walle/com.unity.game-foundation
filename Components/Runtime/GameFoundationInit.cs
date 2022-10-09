@@ -150,6 +150,11 @@ namespace UnityEngine.GameFoundation.Components
             }
         }
 
+        private void OnDestroy()
+        {
+            Uninitialize();
+        }
+
         void OnEnable()
         {
 #if UNITY_EDITOR
