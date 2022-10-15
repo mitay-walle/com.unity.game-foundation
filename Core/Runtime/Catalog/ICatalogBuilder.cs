@@ -1,8 +1,19 @@
 using UnityEngine.GameFoundation.Configs;
 using UnityEngine.Promise;
+#if ODIN_INSPECTOR
+using Sirenix.OdinInspector;
+#endif
 
 namespace UnityEngine.GameFoundation
 {
+    /// <summary>
+    ///     The builder of all the runtime static data of Game Foundation.
+    ///     It is given to the data layer so it can configure the data based on its
+    ///     internal data structure, that Game Foundation doesn't need to know.
+    /// </summary>
+    #if ODIN_INSPECTOR
+    [HideReferenceObjectPicker]
+    #endif
     public interface ICatalogBuilder
     {
         /// <summary>

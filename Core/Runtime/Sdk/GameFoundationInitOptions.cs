@@ -11,5 +11,6 @@ namespace UnityEngine.GameFoundation
         ///     the default <see cref="UnityPurchasingAdapter"/> instance which Game Foundation creates during initialization.
         /// </summary>
         public IPurchasingAdapter purchasingAdapter;
+        public ICatalogBuilder catalogBuilder;
     }
 }

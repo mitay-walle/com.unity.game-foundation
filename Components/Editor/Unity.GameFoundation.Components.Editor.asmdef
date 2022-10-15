@@ -1,5 +1,6 @@
 {
     "name": "Unity.GameFoundation.Components.Editor",
+    "rootNamespace": "UnityEngine.GameFoundation",
     "references": [
         "Unity.GameFoundation",
         "Unity.GameFoundation.DefaultCatalog",

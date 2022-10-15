@@ -1,5 +1,6 @@
 {
     "name": "Unity.GameFoundation.Components",
+    "rootNamespace": "UnityEngine.GameFoundation",
     "references": [
         "Unity.Promise",
         "Unity.GameFoundation",
@@ -9,7 +10,8 @@
         "Unity.ResourceManager",
         "Unity.TextMeshPro",
         "UnityEditor.UI",
-        "UnityEngine.UI"
+        "UnityEngine.UI",
+        "Textus.SerializeReferenceUI"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

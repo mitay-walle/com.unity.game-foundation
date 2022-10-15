@@ -1,5 +1,6 @@
 {
     "name": "Unity.GameFoundation.DefaultLayers",
+    "rootNamespace": "UnityEngine.GameFoundation",
     "references": [
         "Unity.Promise",
         "Unity.GameFoundation",
@@ -7,12 +8,13 @@
         "UnityEditor.UI",
         "UnityEngine.UI"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": []
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

@@ -123,12 +123,12 @@ namespace UnityEngine.GameFoundation
         ///     A promise handle which can be used to get the result of the initialization.
         ///     <seealso cref="Deferred"/>
         /// </returns>
-        public static Deferred Initialize(IDataAccessLayer dataLayer)
+        public static Deferred Initialize(IDataAccessLayer dataLayer,ICatalogBuilder catalogBuilder)
         {
-            return Initialize(dataLayer, null);
+            return InitializeInternal(dataLayer, new GameFoundationInitOptions{catalogBuilder = catalogBuilder});
         }
 
-        internal static Deferred Initialize(IDataAccessLayer dataLayer, GameFoundationInitOptions initOptions)
+        internal static Deferred InitializeInternal(IDataAccessLayer dataLayer, GameFoundationInitOptions initOptions = null)
         {
             Promises.GetHandles(out var deferred, out var completer);
 
@@ -230,7 +230,7 @@ namespace UnityEngine.GameFoundation
             //Catalog building.
             try
             {
-                var catalogBuilder = new CatalogBuilder();
+                var catalogBuilder = initOptions.catalogBuilder;
                 dataLayer.Configure(catalogBuilder);
                 using (var catalogBuilding = catalogBuilder.Build())
                 {

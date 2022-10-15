@@ -1,5 +1,6 @@
 {
     "name": "Unity.GameFoundation.DefaultCatalog",
+    "rootNamespace": "UnityEngine.GameFoundation",
     "references": [
         "Unity.Promise",
         "Unity.GameFoundation",

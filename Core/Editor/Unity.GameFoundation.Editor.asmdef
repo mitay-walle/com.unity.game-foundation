@@ -1,5 +1,6 @@
 {
     "name": "Unity.GameFoundation.Editor",
+    "rootNamespace": "UnityEngine.GameFoundation",
     "references": [
         "Unity.GameFoundation",
         "Unity.Promise",

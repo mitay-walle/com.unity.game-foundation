@@ -6,7 +6,6 @@ using UnityEngine.Events;
 using UnityEngine.GameFoundation.DefaultCatalog;
 using UnityEngine.GameFoundation.DefaultLayers;
 using UnityEngine.GameFoundation.DefaultLayers.Persistence;
-using UnityEngine.Serialization;
 
 namespace UnityEngine.GameFoundation.Components
 {
@@ -40,12 +39,12 @@ namespace UnityEngine.GameFoundation.Components
         ///     used.
         /// </summary>
         public CatalogAsset catalogAsset => m_CatalogAsset;
+        [SerializeField] internal CatalogAsset m_CatalogAsset;
 
-        [SerializeField]
-        internal CatalogAsset m_CatalogAsset;
+        [SerializeField] internal bool m_OverrideCatalogAsset;
 
-        [SerializeField]
-        internal bool m_OverrideCatalogAsset;
+        [SerializeReference,SerializeReferenceButton] private ICatalogBuilder m_catalogBuilder = new DefaultCatalogBuilder();
+        [SerializeReference,SerializeReferenceButton] private IExternalValueProvider m_externalValueProvider;
 
         /// <summary>
         ///     Event raised when GameFoundation is successfully initialized.
@@ -114,19 +113,25 @@ namespace UnityEngine.GameFoundation.Components
         /// </summary>
         static readonly GameFoundationDebug k_GFLogger = GameFoundationDebug.Get<GameFoundationInit>();
 
+
         [InitializeOnEnterPlayMode]
         public static void ReinitOnPlaymode()
         {
             s_Initialized = false;
             Debug.Log($"ReinitOnPlaymode | s_Initialized {s_Initialized}");
         }
-        
+
+
         void Awake()
         {
             Debug.Log($"Awake | s_Initialized {s_Initialized} | isPlaying {Application.isPlaying}");
             
             if (!Application.isPlaying) return;
-
+            if (m_OverrideCatalogAsset && catalogAsset)
+            {
+                catalogAsset.SetValueProvider(m_externalValueProvider);
+            }
+            
             if (!s_Initialized)
             {
                 s_Initialized = true;
@@ -244,7 +249,7 @@ namespace UnityEngine.GameFoundation.Components
             // Initialize Game Foundation for runtime access.
             // The using instruction will automatically release the promise from initDeferred,
             // it optimizes the memory as it allows the promise to be reused.
-            using (var initDeferred = GameFoundationSdk.Initialize(dataLayer))
+            using (var initDeferred = GameFoundationSdk.Initialize(dataLayer,m_catalogBuilder))
             {
                 yield return initDeferred.Wait();
             }

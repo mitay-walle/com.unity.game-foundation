@@ -106,7 +106,7 @@ namespace UnityEditor.GameFoundation.Debugging
         static void DrawPlayModeGameFoundationNotInitialized()
         {
             EditorGUILayout.HelpBox(
-                $"No Runtime data available! Ensure Game Foundation is Initialized via {nameof(GameFoundationSdk)}.{nameof(GameFoundationSdk.Initialize)}()",
+                $"No Runtime data available! Ensure Game Foundation is Initialized via {nameof(GameFoundationSdk)}.{nameof(GameFoundationSdk.InitializeInternal)}()",
                 MessageType.Error);
         }
 

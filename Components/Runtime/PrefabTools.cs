@@ -28,7 +28,7 @@ namespace UnityEngine.GameFoundation.Components
                 return false;
             }
 
-            logger.LogError($"You must call {nameof(GameFoundationSdk)}.{nameof(GameFoundationSdk.Initialize)} "
+            logger.LogError($"You must call {nameof(GameFoundationSdk)}.{nameof(GameFoundationSdk.InitializeInternal)} "
                             + "and wait for "
                             + $"{nameof(GameFoundationSdk)}.{nameof(GameFoundationSdk.IsInitialized)} "
                             + $"to be true before {methodName} can be called.");

@@ -1,7 +1,12 @@
 {
     "name": "GameFoundation.Module.DiceNotation",
     "rootNamespace": "UnityEngine.GameFoundation.OptionalModules.DiceNotation",
-    "references": [],
+    "references": [
+        "GUID:343deaaf83e0cee4ca978e7df0b80d21",
+        "GUID:2bafac87e7f4b9b418d9448d219b01ab",
+        "GUID:474f04aa671d345b0897d1849adaf94b",
+        "GUID:38257907825824cbd959d0a6e1ec6e8f"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

@@ -6,14 +6,10 @@ using UnityEngine.Promise;
 
 namespace UnityEngine.GameFoundation
 {
-    /// <summary>
-    ///     The builder of all the runtime static data of Game Foundation.
-    ///     It is given to the data layer so it can configure the data based on its
-    ///     internal data structure, that Game Foundation doesn't need to know.
-    /// </summary>
-    public class CatalogBuilder : ICatalogBuilder
+    [Serializable]
+    public class RandomCatalogBuilder : ICatalogBuilder
     {
-        /// <summary>
+         /// <summary>
         ///     The configurations of the <see cref="Tag"/> instances to build.
         /// </summary>
         readonly Dictionary<string, TagConfig> m_Tags =
